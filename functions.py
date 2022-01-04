@@ -94,8 +94,10 @@ def parents_selection(parents):
 def evolve(items, max_weight, max_cost, list_of_items, number_of_combinations, mutate_percentage = 0.05):
 
   # Mapeia os fitness com seus valores binários
+  # [(29, 34, 57, 10) , ('010100', '100100', '101010', '111001')]
   parents = [[fitness(item, max_weight, max_cost, list_of_items), item] for item in items if fitness(item, max_weight, max_cost, list_of_items) >= 0 ] 
 
+  # [(57, 34, 29, 10) , ('010100', '100100', '101010', '111001')]
   parents.sort(reverse=True)
 
   sons = []
