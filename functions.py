@@ -53,10 +53,15 @@ def average_fitness(items, max_weight, max_cost, list_of_items):
 # Função utilizada no processo evolutivo para selecionar os pais sorteados
 def parents_selection(parents):
 
+  # Checa se a quantidade de valores que passaram pelas restrições é maior ou igual a 2 (mínimo para realizar um cruzamento)
+  if (len(parents) >= 2) :
   # [(29, 34, 57, 10) , ('010100', '100100', '101010', '111001')] 
-  values = list(zip(*parents))  
-  
-  total_fitness = sum(values[0])
+    values = list(zip(*parents))  
+    total_fitness = sum(values[0])
+  else:
+    father = itemCombination(30)
+    mother = itemCombination(30)
+    return father, mother
 
 
   def sort_index(total_fitness, last_index_selected = -1):

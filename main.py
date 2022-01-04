@@ -7,8 +7,8 @@ list_of_items = [[5,10,1], [2,15,1], [7,2,3], [7,5,1], [6,15,2], [2,16,4], [3,2,
 max_weight = 30
 max_cost = 100
 
-number_of_combinations = 2000
-generations = 80
+number_of_combinations = 100
+generations = 200
 number_of_items = len(list_of_items)
 
 items = generatePopulation(number_of_combinations, number_of_items)
